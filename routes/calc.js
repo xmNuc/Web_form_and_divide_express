@@ -8,7 +8,7 @@ calcRouter.post('/check', (req, res) => {
   const divider = numberA % numberB === 0;
   res.json({ divider });
 
-  res.json({ ok: 'Json is working' });
+  // res.json({ ok: 'Json is working' });
 });
 
 module.exports = {
