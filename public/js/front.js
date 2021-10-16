@@ -10,7 +10,7 @@ form.addEventListener('submit', async (e) => {
 
   console.log(numberA, numberB);
 
-  const res = fetch('/calc/check', {
+  const res = await fetch('/calc/check', {
     method: 'POST',
     body: JSON.stringify({
       numberA,
