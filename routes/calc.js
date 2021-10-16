@@ -3,9 +3,11 @@ const express = require('express');
 const calcRouter = express.Router();
 
 calcRouter.post('/check', (req, res) => {
-  console.log(req.body);
+  const { numberA, numberB } = req.body;
 
-  res.json({ ok: true });
+  console.log(numberA, numberB);
+
+  res.json({ ok: 'Json is working' });
 });
 
 module.exports = {

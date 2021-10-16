@@ -4,11 +4,11 @@ const form = document.querySelector('#form');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
+  // console.log(numberAInput, numberBInput);
+  const numberA = Number(numberAInput.value);
+  const numberB = Number(numberBInput.value);
 
-  const numberA = Number(numberAInput);
-  const numberB = Number(numberBInput);
-
-  console.log(numberA, numberB);
+  // console.log(numberA, numberB);
 
   const res = await fetch('/calc/check', {
     method: 'POST',

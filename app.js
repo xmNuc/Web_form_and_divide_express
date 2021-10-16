@@ -8,4 +8,6 @@ app.use(express.static('public'));
 
 app.use('/calc', calcRouter);
 
-app.listen(3000, 'localhost');
+app.listen(3000, 'localhost', () => {
+  console.log('Server has started on localhost:3000');
+});
