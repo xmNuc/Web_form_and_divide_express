@@ -1,11 +1,11 @@
 const express = require('express');
+const { calcRouter } = require('./routes/calc');
 
 const app = express();
 
+app.use(express.json());
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  console.log('Server has started');
-});
+app.use('/calc', calcRouter);
 
-app.listen(3000);
+app.listen(3000, 'localhost');
